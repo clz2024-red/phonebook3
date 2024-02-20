@@ -56,6 +56,15 @@ public class PhonebookController extends HttpServlet {
 			// db에 저장
 			phoneDao.personInsert(personVo);
 			
+			
+			
+			/* 리다이렉트
+			http://localhost:8080/phonebook3/pbc?action=list  엔터 효과를 낸다
+			*/
+			response.sendRedirect("http://localhost:8080/phonebook3/pbc?action=list");
+			
+			
+			/*
 			// db에서 전체 데이터 가져오기
 			List<PersonVo> personList = phoneDao.personSelect();
 			
@@ -64,6 +73,22 @@ public class PhonebookController extends HttpServlet {
 			
 			// 포워드
 			RequestDispatcher rd= request.getRequestDispatcher("/list.jsp");
+			rd.forward(request, response);
+			*/
+			
+		}else if("list".equals(action)){
+			System.out.println("list:리스트");
+			
+			// db사용
+			PhoneDao phoneDao = new PhoneDao();
+			
+			// 리스트가져오기
+			List<PersonVo> personList = phoneDao.personSelect();
+			
+			// 데이터담기  포워드
+			request.setAttribute("personList", personList);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/list.jsp");
 			rd.forward(request, response);
 		}
 

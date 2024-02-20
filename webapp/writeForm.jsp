@@ -21,7 +21,7 @@ http://localhost:8080/phonebook3/pbc?action=insert&    name=황일영&hp=010&com
 <form action="http://localhost:8080/phonebook3/pbc" method="get">
 	<div>
 		<label>이름(name)</label>
-		<input type="text" name="" value="">
+		<input type="text" name="name" value="">
 	</div>
 	
 	<div>
