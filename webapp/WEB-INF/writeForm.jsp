@@ -17,8 +17,8 @@
 	전화번호를 등록하려면<br>
 	아래 항목을 기입하고 "등록" 버튼을 클릭하세요
 </p>
-http://localhost:8080/phonebook3/pbc?action=insert&    name=황일영&hp=010&company=02
-<form action="http://localhost:8080/phonebook3/pbc" method="get">
+
+<form action="/phonebook3/pbc" method="get">
 	<div>
 		<label>이름(name)</label>
 		<input type="text" name="name" value="">
@@ -42,7 +42,7 @@ http://localhost:8080/phonebook3/pbc?action=insert&    name=황일영&hp=010&com
 </form>
 
 <br><br>
-<a href="">리스트페이지로 이동</a>
+<a href="/phonebook3/pbc?action=list">리스트페이지로 이동</a>
 
 </body>
 </html>
