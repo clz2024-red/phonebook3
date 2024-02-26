@@ -1,4 +1,4 @@
-package com.javaex.dao;
+package com.javaex.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
