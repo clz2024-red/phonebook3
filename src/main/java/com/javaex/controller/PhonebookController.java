@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.javaex.dao.PhoneDao;
+import com.javaex.dao.PhonebookDao;
 import com.javaex.util.WebUtil;
 import com.javaex.vo.PersonVo;
 
@@ -51,7 +51,7 @@ public class PhonebookController extends HttpServlet {
 
 			
 			// db관련 업무
-			PhoneDao phoneDao = new PhoneDao();
+			PhonebookDao phoneDao = new PhonebookDao();
 			
 			// db에 저장
 			phoneDao.personInsert(personVo);
@@ -79,7 +79,7 @@ public class PhonebookController extends HttpServlet {
 			System.out.println(no);
 			
 			// db사용
-			PhoneDao phoneDao = new PhoneDao();
+			PhonebookDao phoneDao = new PhonebookDao();
 			
 			// 삭제
 			phoneDao.personDelete(no);
@@ -99,7 +99,7 @@ public class PhonebookController extends HttpServlet {
 			System.out.println(no);
 			
 			// db사용
-			PhoneDao phoneDao = new PhoneDao();
+			PhonebookDao phoneDao = new PhonebookDao();
 			
 			// 선택한 데이터 가져오기
 			PersonVo personVo = phoneDao.personSelectOne(no);
@@ -122,7 +122,7 @@ public class PhonebookController extends HttpServlet {
 			PersonVo personVo = new PersonVo(no, name, hp, company);
 			
 			// db사용
-			PhoneDao phoneDao = new PhoneDao();
+			PhonebookDao phoneDao = new PhonebookDao();
 			
 			// 데이터 수정
 			phoneDao.personUpdate(personVo);
@@ -135,7 +135,7 @@ public class PhonebookController extends HttpServlet {
 			System.out.println("list:리스트");
 			
 			// db사용
-			PhoneDao phoneDao = new PhoneDao();
+			PhonebookDao phoneDao = new PhonebookDao();
 			
 			// 리스트가져오기
 			List<PersonVo> personList = phoneDao.personSelect();

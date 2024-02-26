@@ -1,11 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="com.javaex.vo.PersonVo" %>
-
-<% 
-	PersonVo personVo =(PersonVo)request.getAttribute("personVo");
-	
-%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
@@ -27,24 +21,22 @@
 <form action="/phonebook3/pbc" method="get">
 	<div>
 		<label>이름(name)</label>
-		<input type="text" name="name" value="<%=personVo.getName()%>">
+		<input type="text" name="name" value="${personVo.name}">
 	</div>
 	
 	<div>
 		<label>핸드폰(hp)</label>
-		<input type="text" name="hp" value="<%=personVo.getHp()%>">
+		<input type="text" name="hp" value="${personVo.hp}">
 	</div>
 	
 	<div>
 		<label>회사(company)</label>
-		<input type="text" name="company" value="<%=personVo.getCompany()%>">
+		<input type="text" name="company" value="${personVo.company}">
 	</div>
 	
 	<input type="text" name="action" value="modify"><br>
-	<input type="text" name="no" value="<%=personVo.getPersonId()%>"><br>
+	<input type="text" name="no" value="${personVo.personId}"><br>
 	<button type="submit">수정</button>
-	
-	
 	
 </form>
 

@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.javaex.vo.PersonVo;
 
-public class PhoneDao {
+public class PhonebookDao {
 
 	// 필드
 	private Connection conn = null;
