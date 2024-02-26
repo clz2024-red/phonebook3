@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.javaex.util.PhonebookDao;
+import com.javaex.dao.PhonebookDao;
 import com.javaex.util.WebUtil;
 import com.javaex.vo.PersonVo;
 
